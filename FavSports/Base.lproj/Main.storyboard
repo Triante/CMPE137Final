@@ -137,7 +137,6 @@
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="IBs-PW-Dhn">
                                 <rect key="frame" x="20" y="128" width="560" height="30"/>
-                                <color key="textColor" red="0.015833780169487" green="0.0045217801816761494" blue="0.011874224990606308" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
@@ -377,10 +376,10 @@
             </objects>
             <point key="canvasLocation" x="1771" y="1107"/>
         </scene>
-        <!--Team Summery-->
+        <!--Team Summary-->
         <scene sceneID="Jow-xS-R82">
             <objects>
-                <viewController title="Team Summery" id="D70-1d-OMo" customClass="TeamSumViewController" customModule="FavSports" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Team Summary" id="D70-1d-OMo" customClass="TeamSumViewController" customModule="FavSports" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="EiU-UD-Igs"/>
                         <viewControllerLayoutGuide type="bottom" id="Qql-fQ-SE7"/>
@@ -525,7 +524,7 @@
         <image name="Stadium-30.png" width="30" height="30"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="A6N-D0-iql"/>
+        <segue reference="ss3-eB-mX5"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" red="0.23018704349999999" green="0.77713233230000001" blue="0.31589496140000001" alpha="1" colorSpace="calibratedRGB"/>
 </document>
