@@ -30,15 +30,5 @@ var CURRENT_USER: Firebase{ // save unique identifier for user that is logged in
     
 }
 
-var CURRENT_USER_UID: String {
-    if FBSDKAccessToken.currentAccessToken()==nil {
-        return FIREBASE_REF.authData.uid
-    }
-    else {
-        //let loginManager = FBSDKLoginManager()
-
-    //print(CURRENT_USER)
-    return FIREBASE_REF.authData.uid
-    }
-}
+var CURRENT_USER_UID: String = ""
 

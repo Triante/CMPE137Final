@@ -44,8 +44,15 @@ class LoginViewController: UIViewController, FBSDKLoginButtonDelegate {
             print("Not logged in")
         }
         else{
+            
+            let accessToken = FBSDKAccessToken.currentAccessToken().tokenString
+            FIREBASE_REF.authWithOAuthProvider("facebook", token: accessToken,
+                                               withCompletionBlock: { error, authData in
+                                                CURRENT_USER_UID = authData.uid
+            })
             self.performSegueWithIdentifier("showHome", sender: self)
             print("Logged In")
+            
         }
         
         if NSUserDefaults.standardUserDefaults().valueForKey("uid") != nil && CURRENT_USER.authData != nil{
@@ -61,8 +68,16 @@ class LoginViewController: UIViewController, FBSDKLoginButtonDelegate {
     func loginButton(loginButton: FBSDKLoginButton!, didCompleteWithResult result: FBSDKLoginManagerLoginResult!, error: NSError!) {
         if error == nil {
             //FIREBASE_REF.childByAppendingPath("Faves")
+            let accessToken = FBSDKAccessToken.currentAccessToken().tokenString
+            FIREBASE_REF.authWithOAuthProvider("facebook", token: accessToken,
+                                               withCompletionBlock: { error, authData in
+                                                CURRENT_USER_UID = authData.uid
+            })
+            
             self.performSegueWithIdentifier("showHome", sender: self)
             print("Log in complete")
+            
+            
         }
         else {
             //print(error.localizedDescription)
@@ -94,6 +109,7 @@ class LoginViewController: UIViewController, FBSDKLoginButtonDelegate {
                 if error == nil
                 {
                     NSUserDefaults.standardUserDefaults().setValue(authData.uid, forKeyPath: "uid")
+                    CURRENT_USER_UID = FIREBASE_REF.authData.uid
                     print("Logged in")
                    //FIREBASE_REF.childByAppendingPath("Faves")
                    self.performSegueWithIdentifier("showHome", sender: self)
