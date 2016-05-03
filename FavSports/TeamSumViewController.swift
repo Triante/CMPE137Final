@@ -19,6 +19,7 @@ class TeamSumViewController: UIViewController {
         super.viewDidLoad()
         message = toRecieve
         test.text = message
+        //print(FIREBASE_REF.authData.uid)
         // Do any additional setup after loading the view.
     }
 
@@ -27,6 +28,13 @@ class TeamSumViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    @IBAction func addToFaves(sender: UIButton) {
+        
+        
+        
+        
+        
+    }
 
     /*
     // MARK: - Navigation

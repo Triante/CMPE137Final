@@ -25,25 +25,22 @@ class MyProfileViewController: UIViewController {
     }
     
     @IBAction func logOutaction(sender: AnyObject) {
+        //https://favesports.firebaseio.com/users/96f8ca92-eb7c-4ade-9df8-f7e8dc8e9104
+        //https://favesports.firebaseio.com/users/96f8ca92-eb7c-4ade-9df8-f7e8dc8e9104
+        if FBSDKAccessToken.currentAccessToken()==nil {
+            CURRENT_USER.unauth()
+        }
+        else {
+            let loginManager = FBSDKLoginManager()
+            
+            loginManager.logOut()
+        }
         
-        CURRENT_USER.unauth()
-        let loginManager = FBSDKLoginManager()
-                loginManager.logOut()
-                self.performSegueWithIdentifier("showLogin", sender: self)
-                print("Log out complete")
+        self.performSegueWithIdentifier("showLogin", sender: self)
+        print("Log out complete")
  
     }
-//    @IBAction func logOutaction(sender: UIButton) {
-//        
-//        CURRENT_USER.unauth()
-//        
-//        let loginManager = FBSDKLoginManager()
-//        loginManager.logOut()
-//        self.performSegueWithIdentifier("showLogin", sender: self)
-//        print("Log out complete")
-//        
-//
-//    }
+
 
     /*
     // MARK: - Navigation
