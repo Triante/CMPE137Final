@@ -19,6 +19,8 @@ class BrowseTeamsViewController: UIViewController, UITableViewDataSource, UITabl
     
     @IBOutlet weak var tableView: UITableView!
     
+    
+    
     override func viewDidAppear(animated: Bool) {
         super.viewWillAppear(animated)
         CLUBS_REF.observeEventType(.Value, withBlock: { snapshot in
@@ -36,8 +38,7 @@ class BrowseTeamsViewController: UIViewController, UITableViewDataSource, UITabl
         for team in teams {
             print("\(team)")
         }
-        print(teams)
-        
+        print(teams)        
     }
     
     override func viewDidLoad() {
