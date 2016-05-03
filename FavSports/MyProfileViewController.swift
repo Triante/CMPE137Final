@@ -15,8 +15,12 @@ class MyProfileViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        print(CURRENT_USER_UID)
         // Do any additional setup after loading the view.
+    }
+    
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(animated)
+        print(CURRENT_USER_UID)
     }
 
     override func didReceiveMemoryWarning() {
