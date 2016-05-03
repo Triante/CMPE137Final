@@ -8,6 +8,7 @@
 
 import UIKit
 
+
 class TeamSumViewController: UIViewController {
 
     private var message: String = ""
@@ -19,8 +20,9 @@ class TeamSumViewController: UIViewController {
         super.viewDidLoad()
         message = toRecieve
         test.text = message
-        //print(FIREBASE_REF.authData.uid)
-        // Do any additional setup after loading the view.
+        //
+        
+                // Do any additional setup after loading the view.
     }
 
     override func didReceiveMemoryWarning() {
@@ -29,7 +31,7 @@ class TeamSumViewController: UIViewController {
     }
     
     @IBAction func addToFaves(sender: UIButton) {
-        
+        FAVES_REF.childByAppendingPath(CURRENT_USER_UID).childByAppendingPath(message).setValue(true)
         
         
         
