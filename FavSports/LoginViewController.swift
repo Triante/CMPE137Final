@@ -11,6 +11,7 @@
 import UIKit
 import FBSDKCoreKit
 import FBSDKLoginKit
+import Firebase
 
 class LoginViewController: UIViewController, FBSDKLoginButtonDelegate {
     
@@ -59,6 +60,7 @@ class LoginViewController: UIViewController, FBSDKLoginButtonDelegate {
     
     func loginButton(loginButton: FBSDKLoginButton!, didCompleteWithResult result: FBSDKLoginManagerLoginResult!, error: NSError!) {
         if error == nil {
+            //FIREBASE_REF.childByAppendingPath("Faves")
             self.performSegueWithIdentifier("showHome", sender: self)
             print("Log in complete")
         }
@@ -93,7 +95,7 @@ class LoginViewController: UIViewController, FBSDKLoginButtonDelegate {
                 {
                     NSUserDefaults.standardUserDefaults().setValue(authData.uid, forKeyPath: "uid")
                     print("Logged in")
-                
+                   //FIREBASE_REF.childByAppendingPath("Faves")
                    self.performSegueWithIdentifier("showHome", sender: self)
                     
                 }
