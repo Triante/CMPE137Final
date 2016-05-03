@@ -31,7 +31,7 @@ class TeamSumViewController: UIViewController {
     }
     
     @IBAction func addToFaves(sender: UIButton) {
-        FAVES_REF.childByAppendingPath(CURRENT_USER_UID).childByAppendingPath(message).setValue(true)
+        USER_REF.childByAppendingPath(message).setValue(true)
         
         
         
