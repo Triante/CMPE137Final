@@ -195,11 +195,11 @@
                                         <rect key="frame" x="0.0" y="92" width="600" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="okx-aT-Tar" id="4VQ-b4-MHr">
-                                            <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="C1p-pv-bNP">
-                                                    <rect key="frame" x="15" y="0.0" width="570" height="43"/>
+                                                    <rect key="frame" x="15" y="0.0" width="570" height="43.5"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -335,7 +335,7 @@
                                                 <rect key="frame" x="0.0" y="28" width="599" height="44"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="j0l-RQ-epM" id="4QS-IK-zVE">
-                                                    <rect key="frame" x="0.0" y="0.0" width="599" height="43"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="599" height="43.5"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                 </tableViewCellContentView>
                                             </tableViewCell>
@@ -451,7 +451,7 @@
         <!--Team Profile-->
         <scene sceneID="Oc8-Rc-3vh">
             <objects>
-                <viewController title="Team Profile" id="gKV-rI-O0K" sceneMemberID="viewController">
+                <viewController title="Team Profile" id="gKV-rI-O0K" customClass="TeamProfileViewController" customModule="FavSports" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="ieD-Y4-NMk"/>
                         <viewControllerLayoutGuide type="bottom" id="uaX-0l-Wly"/>
@@ -459,9 +459,39 @@
                     <view key="view" contentMode="scaleToFill" id="wpZ-Kx-Y1g">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zeh-FU-Za6">
+                                <rect key="frame" x="20" y="144" width="560" height="264"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7Pm-rh-GdL">
+                                <rect key="frame" x="20" y="35" width="191" height="101"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3sn-Ek-Re0">
+                                <rect key="frame" x="286" y="56" width="260" height="60"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="leadingMargin" secondItem="7Pm-rh-GdL" secondAttribute="leading" id="0e6-Xu-DId"/>
+                            <constraint firstItem="3sn-Ek-Re0" firstAttribute="leading" secondItem="7Pm-rh-GdL" secondAttribute="trailing" constant="75" id="1Qw-hx-W2r"/>
+                            <constraint firstItem="3sn-Ek-Re0" firstAttribute="top" secondItem="ieD-Y4-NMk" secondAttribute="bottom" constant="36" id="3Ai-bi-95u"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="zeh-FU-Za6" secondAttribute="leading" id="8Sd-dh-NDa"/>
+                            <constraint firstItem="zeh-FU-Za6" firstAttribute="top" secondItem="3sn-Ek-Re0" secondAttribute="bottom" constant="28" id="Dhr-yA-zL2"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="3sn-Ek-Re0" secondAttribute="trailing" constant="34" id="ISL-Mp-rRq"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="zeh-FU-Za6" secondAttribute="trailing" id="Np0-c3-ya2"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="zeh-FU-Za6" secondAttribute="leading" id="bNn-AR-h2y"/>
+                            <constraint firstItem="uaX-0l-Wly" firstAttribute="top" secondItem="zeh-FU-Za6" secondAttribute="bottom" constant="143" id="dcu-eW-FLi"/>
+                            <constraint firstItem="7Pm-rh-GdL" firstAttribute="top" secondItem="ieD-Y4-NMk" secondAttribute="bottom" constant="15" id="hRm-Z7-mfS"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Team Profile" image="Football 2 Filled-30.png" id="y1M-Vm-6IG"/>
+                    <connections>
+                        <outlet property="stadiumPic" destination="zeh-FU-Za6" id="leo-gr-12m"/>
+                        <outlet property="teamName" destination="3sn-Ek-Re0" id="AGX-zf-weJ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uGY-Ds-zkG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
