@@ -20,6 +20,7 @@ let CLUBS_REF = Firebase(url:"https://favesports.firebaseio.com/Clubs")
 //let PLAYER_REF =
 //let SPORTS_REF =
 let FAVES_REF = Firebase(url:"https://favesports.firebaseio.com/Faves")
+let PLAYERS_REF = Firebase(url:"https://favesports.firebaseio.com/Players")
 
 var CURRENT_USER: Firebase{ // save unique identifier for user that is logged in when authinticated
     let userID = NSUserDefaults.standardUserDefaults().valueForKey("uid") as! String

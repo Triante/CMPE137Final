@@ -32,11 +32,11 @@ class BrowseTeamsViewController: UIViewController, UITableViewDataSource, UITabl
             self.tableView.reloadData()
             print(self.teams)
         })
-        print("final array:")
+        /*print("final array:")
         for team in teams {
             print("\(team)")
-        }
-        print(teams)
+        }*/
+        //print(teams)
         
     }
     
@@ -66,7 +66,7 @@ class BrowseTeamsViewController: UIViewController, UITableViewDataSource, UITabl
     
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         let keys = categorizedTeams.keys
-        
+         print(self.teams)
         return keys.count
     }
     
@@ -117,7 +117,7 @@ class BrowseTeamsViewController: UIViewController, UITableViewDataSource, UITabl
         return cell
     }
     func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        
+         print(self.teams)
 
         // Fetch and Sort Keys
         let keys = categorizedTeams.keys.sort({ (a, b) -> Bool in
@@ -146,7 +146,7 @@ class BrowseTeamsViewController: UIViewController, UITableViewDataSource, UITabl
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         var teamName : String
         teamName = teams[indexPath.row]
-        
+         print(self.teams)
         let cell = tableView.cellForRowAtIndexPath(indexPath)!
         toggleCellCheckbox(cell, teamName: teamName)
         print(faves)
