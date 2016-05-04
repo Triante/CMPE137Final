@@ -8,11 +8,40 @@
 
 import UIKit
 
-
+extension UIColor {
+    convenience init(red: Int, green: Int, blue: Int) {
+        let newRed = CGFloat(red)/255
+        let newGreen = CGFloat(green)/255
+        let newBlue = CGFloat(blue)/255
+        
+        self.init(red: newRed, green: newGreen, blue: newBlue, alpha: 1.0)
+    }
+}
 class TeamSumViewController: UIViewController {
 
     private var message: String = ""
     var toRecieve: String = ""
+    
+    let ArseGold = UIColor(red: 201, green: 166, blue: 26)
+    let ArseBlue = UIColor(red: 0, green: 0, blue: 102)
+    
+    let ChelsBlue = UIColor(red: 26, green: 1, blue: 201)
+    let ChelsRed = UIColor(red:255, green: 0, blue: 0)
+    //use ArseGold for chelse
+    
+    //use ChelseBlue for LeicBlue
+    let LeicYellow = UIColor(red: 255, green: 235, blue: 62)
+    
+    let LivRed = UIColor(red: 204, green: 0, blue: 0)
+    let LivCyan = UIColor(red: 0, green: 153, blue: 153)
+    
+    let ManCGold = UIColor(red: 250, green: 221, blue: 75)
+    let ManCLightBlue = UIColor(red: 51, green: 153, blue: 255)
+    
+    //Use ChelsRed for ManURed
+    let ManUYellow = UIColor(red: 255, green: 237, blue: 65)
+    
+    //Use ArseBlue for TottBlue
     
     @IBOutlet weak var test: UILabel!
    
@@ -22,7 +51,7 @@ class TeamSumViewController: UIViewController {
         test.text = message
         //
         
-                // Do any additional setup after loading the view.
+       self.view.backgroundColor = ArseGold
     }
 
     override func didReceiveMemoryWarning() {
@@ -31,7 +60,7 @@ class TeamSumViewController: UIViewController {
     }
     
     @IBAction func addToFaves(sender: UIButton) {
-        FAVES_REF.childByAppendingPath(CURRENT_USER_UID).childByAppendingPath(message).setValue(true)
+        USER_REF.childByAppendingPath(message).setValue(true)
         
         
         

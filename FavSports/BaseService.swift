@@ -20,6 +20,7 @@ let CLUBS_REF = Firebase(url:"https://favesports.firebaseio.com/Clubs")
 //let PLAYER_REF =
 //let SPORTS_REF =
 let FAVES_REF = Firebase(url:"https://favesports.firebaseio.com/Faves")
+let USER_REF = FAVES_REF.childByAppendingPath(CURRENT_USER_UID)
 
 var CURRENT_USER: Firebase{ // save unique identifier for user that is logged in when authinticated
     let userID = NSUserDefaults.standardUserDefaults().valueForKey("uid") as! String
@@ -31,4 +32,5 @@ var CURRENT_USER: Firebase{ // save unique identifier for user that is logged in
 }
 
 var CURRENT_USER_UID: String = ""
+var SELECTED_TEAM: String = ""
 
