@@ -1,17 +1,18 @@
 //
-//  FavesViewController.swift
+//  StatsViewController.swift
 //  FavSports
 //
 //  Created by Jorge Aguiniga on 5/3/16.
 //  Copyright © 2016 CMPE 137. All rights reserved.
 //
 
-import Firebase
 import UIKit
+import Firebase
 
-class FavesViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+class StatsViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
-    let cellIdentifier = "CellIdentifier2"
+    let cellIdentifier = "CellIdentifierStatMain"
+    
     
     var categorizedTeams = [String: [String]]()
     
@@ -26,18 +27,21 @@ class FavesViewController: UIViewController, UITableViewDataSource, UITableViewD
     
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
+        
         faveTeams = []
-        let uid = FIREBASE_REF.authData.uid
-        let user_ref_local = FAVES_REF.childByAppendingPath(uid)
-        user_ref_local.observeEventType(.ChildAdded, withBlock: { snapshot in
-            //var newTeams = [String]()
-            let name = snapshot.key
-            self.faveTeams.append(name)
-            
-            //self.faveTeams = newTeams
-            self.categorizedTeams = self.categorize(self.faveTeams)
-            self.tableView.reloadData()
+        //CLUBS_REF.queryOrderedByChild("Match Stats/Points")
+        
+        CLUBS_REF.queryOrderedByChild("Match Stats/Points").observeEventType(.Value, withBlock: { snapshot in
+            for item in (snapshot.children).reverse() {
+                let child = item.childSnapshotForPath("Match Stats")
+                let stats = "P: \(child.value["Played"] as! Int)    | W: \(child.value["Won"] as! Int) | D: \(child.value["Drawn"] as! Int) | L: \(child.value["Lost"] as! Int) |     Pts: \(child.value["Points"] as! Int)"
+                self.faveTeams.append(item.key)
+                self.faveTeams.append(stats)
+                self.categorizedTeams = self.categorize(self.faveTeams)
+                self.tableView.reloadData()
+            }
         })
+        
     }
     
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
@@ -105,12 +109,12 @@ class FavesViewController: UIViewController, UITableViewDataSource, UITableViewD
     private func categorize(array: [String]) -> [String: [String]] {
         var result = [String: [String]]()
         for item in array{
-            if result["Faves"] != nil{
-                result["Faves"]!.append(item)
+            if result["Stats and Rankings"] != nil{
+                result["Stats and Rankings"]!.append(item)
                 
             }
             else{
-                result["Faves"] = [item]
+                result["Stats and Rankings"] = [item]
             }
         }
         return result
@@ -120,30 +124,10 @@ class FavesViewController: UIViewController, UITableViewDataSource, UITableViewD
     var faves = [String]()
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        var teamName : String
-        teamName = faveTeams[indexPath.row]
-        
-        let cell = tableView.cellForRowAtIndexPath(indexPath)!
-        toggleCellCheckbox(cell, teamName: teamName)
+
     }
     
-    var message:String = ""
-    func toggleCellCheckbox(cell: UITableViewCell, teamName: String) {
-        SELECTED_TEAM = teamName
-        //message = teamName
-        self.performSegueWithIdentifier("showTeamProfile", sender: self)
-    }
     
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        //let secondVC: TeamSumViewController = segue.destinationViewController as! TeamSumViewController
-        //secondVC.toRecieve = message
-    }
-
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
     
 
     /*

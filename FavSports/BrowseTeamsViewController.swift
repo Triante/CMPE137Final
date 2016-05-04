@@ -32,38 +32,13 @@ class BrowseTeamsViewController: UIViewController, UITableViewDataSource, UITabl
             self.teams = newTeams
             self.categorizedTeams = self.categorize(self.teams)
             self.tableView.reloadData()
-            print(self.teams)
-        })
-        print("final array:")
-        for team in teams {
-            print("\(team)")
-        }
-        print(teams)        
+        }) 
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        FIREBASE_REF.observeAuthEventWithBlock { authData in
-            if authData != nil {
-                let uid = authData.uid
-                print(uid)
-                //96f8ca92-eb7c-4ade-9df8-f7e8dc8e9104
-            }
-        }
-
     }
-    override func viewWillAppear(animated: Bool) {
-        super.viewWillAppear(animated)
-        self.navigationController?.navigationBarHidden = true
-
-    }
-    
-    override func viewWillDisappear(animated: Bool) {
-        super.viewWillDisappear(animated)
-        self.navigationController?.navigationBarHidden = false
-    }
-
     
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         let keys = categorizedTeams.keys
@@ -150,7 +125,6 @@ class BrowseTeamsViewController: UIViewController, UITableViewDataSource, UITabl
         
         let cell = tableView.cellForRowAtIndexPath(indexPath)!
         toggleCellCheckbox(cell, teamName: teamName)
-        print(faves)
     }
 
     override func didReceiveMemoryWarning() {
