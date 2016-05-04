@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="3lW-3L-P2F">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="3lW-3L-P2F">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -448,29 +448,61 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="luR-5h-Tw2">
-                                <rect key="frame" x="20" y="72" width="560" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="luR-5h-Tw2">
+                                <rect key="frame" x="20" y="20" width="560" height="32"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="32"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BS0-wB-Dbj">
-                                <rect key="frame" x="20" y="101" width="96" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BS0-wB-Dbj">
+                                <rect key="frame" x="469" y="521" width="96" height="30"/>
                                 <state key="normal" title="Add To Faves!"/>
                                 <connections>
                                     <action selector="addToFaves:" destination="D70-1d-OMo" eventType="touchUpInside" id="IQO-Wv-GLk"/>
                                 </connections>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="OEo-c6-Rmy">
+                                <rect key="frame" x="175" y="60" width="250" height="224"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="250" id="ewU-XV-AcP"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nickname" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KlR-OC-2g6">
+                                <rect key="frame" x="244" y="317" width="112" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Established" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vaD-DX-HH4">
+                                <rect key="frame" x="236" y="405" width="129" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="luR-5h-Tw2" firstAttribute="centerY" secondItem="7o3-i7-R2d" secondAttribute="centerY" constant="-217.5" id="Yfo-dL-EQd"/>
-                            <constraint firstItem="luR-5h-Tw2" firstAttribute="top" secondItem="EiU-UD-Igs" secondAttribute="bottom" constant="8" id="qKD-Vw-eJh"/>
+                            <constraint firstItem="OEo-c6-Rmy" firstAttribute="top" secondItem="luR-5h-Tw2" secondAttribute="bottom" constant="8" id="PkL-i5-g9m"/>
+                            <constraint firstItem="vaD-DX-HH4" firstAttribute="centerX" secondItem="KlR-OC-2g6" secondAttribute="centerX" id="SF1-Ng-rTf"/>
+                            <constraint firstItem="vaD-DX-HH4" firstAttribute="top" secondItem="KlR-OC-2g6" secondAttribute="bottom" constant="58" id="Xvd-ev-saJ"/>
+                            <constraint firstItem="luR-5h-Tw2" firstAttribute="centerY" secondItem="7o3-i7-R2d" secondAttribute="centerY" constant="-264" id="Yfo-dL-EQd"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="BS0-wB-Dbj" secondAttribute="trailing" constant="15" id="Zku-Jr-Q5g"/>
+                            <constraint firstItem="OEo-c6-Rmy" firstAttribute="centerX" secondItem="luR-5h-Tw2" secondAttribute="centerX" id="dbi-r9-tPS"/>
+                            <constraint firstItem="KlR-OC-2g6" firstAttribute="centerX" secondItem="OEo-c6-Rmy" secondAttribute="centerX" id="gvc-fE-Oev"/>
+                            <constraint firstItem="Qql-fQ-SE7" firstAttribute="top" secondItem="OEo-c6-Rmy" secondAttribute="bottom" constant="267" id="lkw-FN-AN5"/>
+                            <constraint firstItem="KlR-OC-2g6" firstAttribute="top" secondItem="OEo-c6-Rmy" secondAttribute="bottom" constant="33" id="owj-Jp-n33"/>
+                            <constraint firstItem="luR-5h-Tw2" firstAttribute="top" secondItem="EiU-UD-Igs" secondAttribute="bottom" id="qKD-Vw-eJh"/>
                             <constraint firstAttribute="leadingMargin" secondItem="luR-5h-Tw2" secondAttribute="leading" id="saE-S9-KMd"/>
+                            <constraint firstItem="BS0-wB-Dbj" firstAttribute="bottom" secondItem="Qql-fQ-SE7" secondAttribute="top" id="xek-jE-0GX"/>
+                            <constraint firstItem="OEo-c6-Rmy" firstAttribute="centerX" secondItem="7o3-i7-R2d" secondAttribute="centerX" id="zNy-Y7-I6e"/>
                         </constraints>
                     </view>
+                    <nil key="simulatedTopBarMetrics"/>
                     <connections>
-                        <outlet property="test" destination="luR-5h-Tw2" id="k43-av-EK2"/>
+                        <outlet property="Established" destination="vaD-DX-HH4" id="BZx-xh-ZOS"/>
+                        <outlet property="Name" destination="luR-5h-Tw2" id="QQT-el-dnV"/>
+                        <outlet property="Nickname" destination="KlR-OC-2g6" id="Fsr-kD-UvA"/>
+                        <outlet property="TeamLogo" destination="OEo-c6-Rmy" id="6uN-d7-klK"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sPw-1s-DRe" userLabel="First Responder" sceneMemberID="firstResponder"/>

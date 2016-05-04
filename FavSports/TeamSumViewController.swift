@@ -43,15 +43,28 @@ class TeamSumViewController: UIViewController {
     
     //Use ArseBlue for TottBlue
     
-    @IBOutlet weak var test: UILabel!
+    
+    @IBOutlet weak var Name: UILabel!
    
+   
+    @IBOutlet weak var TeamLogo: UIImageView!
+    
+    
+    @IBOutlet weak var Nickname: UILabel!
+    
+    
+    @IBOutlet weak var Established: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         message = toRecieve
-        test.text = message
-        //
+        Name.text = message
         
-       self.view.backgroundColor = ArseGold
+        TeamLogo.image = UIImage(named: "Hotspur.png")
+        Name.textColor = UIColor.whiteColor()
+        Nickname.textColor = UIColor.redColor()
+        Established.textColor = ArseGold
+       self.view.backgroundColor = UIColor.whiteColor()
     }
 
     override func didReceiveMemoryWarning() {
