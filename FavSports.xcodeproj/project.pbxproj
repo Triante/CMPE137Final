@@ -149,6 +149,13 @@
 		E662B7291CD70A5700AF09EE /* images */ = {
 			isa = PBXGroup;
 			children = (
+				EC05DE661CD9AE02002196E5 /* chelsea.png */,
+				EC05DE6A1CD9AFF0002196E5 /* LiverpoolLogo.png */,
+				EC05DE6C1CD9B094002196E5 /* ManchesterCity.png */,
+				EC05DE6E1CD9B10E002196E5 /* ManchesterUnited.png */,
+				EC05DE701CD9B1C3002196E5 /* Hotspur.png */,
+				EC05DE681CD9AF56002196E5 /* LeicesterCityLogo.png */,
+				EC05DE641CD9A628002196E5 /* Arsenal.png */,
 				691CFC1A1CD5A16B007E26C2 /* Football 2 Filled-50.png */,
 				691CFC1E1CD5A33F007E26C2 /* Add to Favorites Filled-30.png */,
 				691CFC201CD5A3D1007E26C2 /* Binoculars-30.png */,
@@ -253,15 +260,22 @@
 			buildActionMask = 2147483647;
 			files = (
 				691CFC2B1CD5E36E007E26C2 /* Football 2 Filled-30.png in Resources */,
+				EC05DE651CD9A628002196E5 /* Arsenal.png in Resources */,
 				691CFC231CD5A654007E26C2 /* baseball_field_grass_field_wal_2560x1600_wallpaperhi-com.jpg in Resources */,
+				EC05DE671CD9AE02002196E5 /* chelsea.png in Resources */,
 				691CFC1D1CD5A27C007E26C2 /* About Us Male-30.png in Resources */,
 				691CFC2A1CD5E36E007E26C2 /* Stadium-30.png in Resources */,
 				691428ED1CCAEB5100AEB132 /* LaunchScreen.storyboard in Resources */,
 				691CFC2F1CD5E4EC007E26C2 /* Calendar-30.png in Resources */,
 				691CFC211CD5A3D1007E26C2 /* Binoculars-30.png in Resources */,
 				691428EA1CCAEB5100AEB132 /* Assets.xcassets in Resources */,
+				EC05DE6B1CD9AFF0002196E5 /* LiverpoolLogo.png in Resources */,
 				691CFC291CD5E36E007E26C2 /* Football-30.png in Resources */,
+				EC05DE6D1CD9B094002196E5 /* ManchesterCity.png in Resources */,
+				EC05DE6F1CD9B10E002196E5 /* ManchesterUnited.png in Resources */,
 				691CFC1B1CD5A16B007E26C2 /* Football 2 Filled-50.png in Resources */,
+				EC05DE711CD9B1C3002196E5 /* Hotspur.png in Resources */,
+				EC05DE691CD9AF56002196E5 /* LeicesterCityLogo.png in Resources */,
 				691CFC2E1CD5E4EC007E26C2 /* Leaderboard Filled-30.png in Resources */,
 				691CFC1F1CD5A33F007E26C2 /* Add to Favorites Filled-30.png in Resources */,
 				691428E81CCAEB5100AEB132 /* Main.storyboard in Resources */,
