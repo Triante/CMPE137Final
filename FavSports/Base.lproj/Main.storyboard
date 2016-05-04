@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="3lW-3L-P2F">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="3lW-3L-P2F">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -313,7 +313,6 @@
         <!--MyFavs-->
         <scene sceneID="woK-Mp-zeq">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Hyz-By-s2Q" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController title="MyFavs" id="tXb-zK-kSD" customClass="FavesViewController" customModule="FavSports" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="VVb-Ka-tqI"/>
@@ -356,6 +355,7 @@
                         <segue destination="t6m-Zb-vLp" kind="show" identifier="showTeamProfile" id="m1S-Ms-7hL"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Hyz-By-s2Q" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="613" y="403"/>
         </scene>
