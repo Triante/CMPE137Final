@@ -10,6 +10,12 @@ import UIKit
 
 class StadiumViewController: UIViewController {
 
+    @IBOutlet weak var venueName: UILabel!
+    @IBOutlet weak var imageView: UIImageView!
+    @IBOutlet weak var addressTextBox: UITextView!
+    @IBOutlet weak var builtLabel: UILabel!
+    @IBOutlet weak var capacityLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
