@@ -28,11 +28,8 @@ class FavesViewController: UIViewController, UITableViewDataSource, UITableViewD
         super.viewDidAppear(animated)
         faveTeams = []
         let uid = FIREBASE_REF.authData.uid
-        print(uid)
         let user_ref_local = FAVES_REF.childByAppendingPath(uid)
-        print(user_ref_local)
         user_ref_local.observeEventType(.ChildAdded, withBlock: { snapshot in
-            print(snapshot.key)
             //var newTeams = [String]()
             let name = snapshot.key
             self.faveTeams.append(name)
@@ -40,20 +37,7 @@ class FavesViewController: UIViewController, UITableViewDataSource, UITableViewD
             //self.faveTeams = newTeams
             self.categorizedTeams = self.categorize(self.faveTeams)
             self.tableView.reloadData()
-            print(self.faveTeams)
-        
         })
-    }
-    
-    override func viewWillAppear(animated: Bool) {
-        super.viewWillAppear(animated)
-        self.navigationController?.navigationBarHidden = true
-        
-    }
-    
-    override func viewWillDisappear(animated: Bool) {
-        super.viewWillDisappear(animated)
-        self.navigationController?.navigationBarHidden = false
     }
     
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
@@ -141,7 +125,6 @@ class FavesViewController: UIViewController, UITableViewDataSource, UITableViewD
         
         let cell = tableView.cellForRowAtIndexPath(indexPath)!
         toggleCellCheckbox(cell, teamName: teamName)
-        print(faves)
     }
     
     var message:String = ""
