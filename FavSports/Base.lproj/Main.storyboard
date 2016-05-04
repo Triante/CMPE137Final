@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="3lW-3L-P2F">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="3lW-3L-P2F">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -418,7 +418,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="8Ls-ku-k6z" firstAttribute="trailing" secondItem="sbw-kj-MGy" secondAttribute="trailing" id="07z-LV-dwC"/>
-                            <constraint firstItem="8Ls-ku-k6z" firstAttribute="top" secondItem="COY-9o-KOg" secondAttribute="bottom" id="L09-a8-cYj"/>
+                            <constraint firstItem="8Ls-ku-k6z" firstAttribute="top" secondItem="COY-9o-KOg" secondAttribute="bottom" constant="-44" id="L09-a8-cYj"/>
                             <constraint firstItem="8Ls-ku-k6z" firstAttribute="leading" secondItem="sbw-kj-MGy" secondAttribute="leading" id="M9k-R0-iap"/>
                             <constraint firstItem="8Ls-ku-k6z" firstAttribute="bottom" secondItem="hjC-y2-8hU" secondAttribute="top" id="Rio-Ok-TcS"/>
                             <constraint firstAttribute="trailing" secondItem="8Ls-ku-k6z" secondAttribute="trailing" id="Skd-ob-xiH"/>
@@ -576,6 +576,10 @@
         <scene sceneID="e8J-cQ-x3N">
             <objects>
                 <viewController id="iGV-1x-RXa" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="s3c-vN-7bB"/>
+                        <viewControllerLayoutGuide type="bottom" id="ZeO-zb-LeY"/>
+                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="Fba-qH-IKS">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="531"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -589,6 +593,10 @@
         <scene sceneID="COI-GP-ECb">
             <objects>
                 <viewController id="4hm-rt-WeK" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="w7i-H4-HHb"/>
+                        <viewControllerLayoutGuide type="bottom" id="srC-Z6-STe"/>
+                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="qnt-Eq-QLu">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="487"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -602,6 +610,10 @@
         <scene sceneID="Nrz-Za-r0t">
             <objects>
                 <viewController id="P8A-iP-7nu" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="G0S-jT-XvP"/>
+                        <viewControllerLayoutGuide type="bottom" id="2cZ-eU-LlO"/>
+                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="Aha-lv-fL0">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="495"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
