@@ -250,7 +250,56 @@
                     <view key="view" contentMode="scaleToFill" id="4xd-KC-OrI">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name Of The Plave They Play" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lyQ-8t-jS1">
+                                <rect key="frame" x="20" y="72" width="560" height="56"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Address will go here :)" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="kaN-ib-OHW">
+                                <rect key="frame" x="20" y="416" width="271" height="135"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="271" id="XPO-GK-bv0"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Built:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mzc-5H-i7G">
+                                <rect key="frame" x="299" y="416" width="39" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Capacity:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xpB-qe-Bhf">
+                                <rect key="frame" x="299" y="473" width="72" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ha3-B4-5GR">
+                                <rect key="frame" x="20" y="136" width="560" height="272"/>
+                            </imageView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Mzc-5H-i7G" firstAttribute="leading" secondItem="xpB-qe-Bhf" secondAttribute="leading" id="7cB-hD-EdD"/>
+                            <constraint firstItem="kaN-ib-OHW" firstAttribute="centerY" secondItem="xpB-qe-Bhf" secondAttribute="centerY" id="Avn-2g-A1i"/>
+                            <constraint firstItem="kaN-ib-OHW" firstAttribute="top" secondItem="ha3-B4-5GR" secondAttribute="bottom" constant="8" symbolic="YES" id="Cca-4k-YlT"/>
+                            <constraint firstItem="lyQ-8t-jS1" firstAttribute="leading" secondItem="4xd-KC-OrI" secondAttribute="leadingMargin" id="LPh-am-naU"/>
+                            <constraint firstItem="ha3-B4-5GR" firstAttribute="leading" secondItem="kaN-ib-OHW" secondAttribute="leading" id="Tul-en-lkW"/>
+                            <constraint firstItem="ha3-B4-5GR" firstAttribute="leading" secondItem="lyQ-8t-jS1" secondAttribute="leading" id="U97-im-eSv"/>
+                            <constraint firstItem="leO-Vy-Ja9" firstAttribute="top" secondItem="lyQ-8t-jS1" secondAttribute="bottom" constant="423" id="dtu-dW-5bz"/>
+                            <constraint firstItem="kaN-ib-OHW" firstAttribute="top" secondItem="Mzc-5H-i7G" secondAttribute="top" id="f6f-Sn-MjN"/>
+                            <constraint firstItem="ha3-B4-5GR" firstAttribute="top" secondItem="lyQ-8t-jS1" secondAttribute="bottom" constant="8" symbolic="YES" id="hO7-2X-8Ow"/>
+                            <constraint firstItem="ha3-B4-5GR" firstAttribute="trailing" secondItem="lyQ-8t-jS1" secondAttribute="trailing" id="iqf-Z2-I52"/>
+                            <constraint firstItem="lyQ-8t-jS1" firstAttribute="top" secondItem="7QE-X3-CON" secondAttribute="bottom" constant="8" symbolic="YES" id="lTd-RC-3hI"/>
+                            <constraint firstItem="kaN-ib-OHW" firstAttribute="bottom" secondItem="leO-Vy-Ja9" secondAttribute="top" id="qix-I7-ShA"/>
+                            <constraint firstItem="lyQ-8t-jS1" firstAttribute="trailing" secondItem="4xd-KC-OrI" secondAttribute="trailingMargin" id="xez-zm-NTU"/>
+                            <constraint firstItem="xpB-qe-Bhf" firstAttribute="top" secondItem="Mzc-5H-i7G" secondAttribute="bottom" constant="36" id="zJZ-59-OwZ"/>
+                            <constraint firstItem="Mzc-5H-i7G" firstAttribute="leading" secondItem="kaN-ib-OHW" secondAttribute="trailing" constant="8" symbolic="YES" id="zrI-kK-ZoR"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Stadium" image="Stadium-30.png" id="wOv-Rv-mDn"/>
                 </viewController>

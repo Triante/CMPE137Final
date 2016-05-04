@@ -33,6 +33,7 @@
 		E662B72B1CD70AD300AF09EE /* SearchTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E662B72A1CD70AD300AF09EE /* SearchTable.swift */; };
 		E69D7D951CD917C2003DB36C /* FavesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E69D7D941CD917C2003DB36C /* FavesViewController.swift */; };
 		E69D7D971CD94712003DB36C /* StatsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E69D7D961CD94712003DB36C /* StatsViewController.swift */; };
+		E69D7D991CD9B1B1003DB36C /* StadiumViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E69D7D981CD9B1B1003DB36C /* StadiumViewController.swift */; };
 		EC3D50A41CD158BD00FD20C6 /* HomeScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC3D50A31CD158BD00FD20C6 /* HomeScreenViewController.swift */; };
 		EC3D50A61CD1A8FD00FD20C6 /* BrowseTeamsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC3D50A51CD1A8FD00FD20C6 /* BrowseTeamsViewController.swift */; };
 		EC3D50A81CD1AA0500FD20C6 /* TeamStatsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC3D50A71CD1AA0500FD20C6 /* TeamStatsViewController.swift */; };
@@ -69,6 +70,7 @@
 		E662B72A1CD70AD300AF09EE /* SearchTable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchTable.swift; sourceTree = "<group>"; };
 		E69D7D941CD917C2003DB36C /* FavesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavesViewController.swift; sourceTree = "<group>"; };
 		E69D7D961CD94712003DB36C /* StatsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatsViewController.swift; sourceTree = "<group>"; };
+		E69D7D981CD9B1B1003DB36C /* StadiumViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StadiumViewController.swift; sourceTree = "<group>"; };
 		EC3D50A31CD158BD00FD20C6 /* HomeScreenViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeScreenViewController.swift; sourceTree = "<group>"; };
 		EC3D50A51CD1A8FD00FD20C6 /* BrowseTeamsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BrowseTeamsViewController.swift; sourceTree = "<group>"; };
 		EC3D50A71CD1AA0500FD20C6 /* TeamStatsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TeamStatsViewController.swift; sourceTree = "<group>"; };
@@ -173,6 +175,7 @@
 				E64351611CD8104E0041DE20 /* TeamSumViewController.swift */,
 				E69D7D941CD917C2003DB36C /* FavesViewController.swift */,
 				E69D7D961CD94712003DB36C /* StatsViewController.swift */,
+				E69D7D981CD9B1B1003DB36C /* StadiumViewController.swift */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -329,6 +332,7 @@
 				691428E31CCAEB5100AEB132 /* AppDelegate.swift in Sources */,
 				EC3D50A61CD1A8FD00FD20C6 /* BrowseTeamsViewController.swift in Sources */,
 				69B674EE1CCE90F70071F19A /* BaseService.swift in Sources */,
+				E69D7D991CD9B1B1003DB36C /* StadiumViewController.swift in Sources */,
 				E64351621CD8104E0041DE20 /* TeamSumViewController.swift in Sources */,
 				E69D7D971CD94712003DB36C /* StatsViewController.swift in Sources */,
 				EC3D50A41CD158BD00FD20C6 /* HomeScreenViewController.swift in Sources */,
