@@ -29,6 +29,7 @@
 		69B674EE1CCE90F70071F19A /* BaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69B674ED1CCE90F70071F19A /* BaseService.swift */; };
 		69B674F01CCE92D70071F19A /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69B674EF1CCE92D70071F19A /* LoginViewController.swift */; };
 		69B674F21CCE92EA0071F19A /* CreateAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69B674F11CCE92EA0071F19A /* CreateAccountViewController.swift */; };
+		AF68538C1CD9962300B31EB8 /* TeamProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF68538B1CD9962300B31EB8 /* TeamProfileViewController.swift */; };
 		E64351621CD8104E0041DE20 /* TeamSumViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E64351611CD8104E0041DE20 /* TeamSumViewController.swift */; };
 		E662B72B1CD70AD300AF09EE /* SearchTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E662B72A1CD70AD300AF09EE /* SearchTable.swift */; };
 		E69D7D951CD917C2003DB36C /* FavesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E69D7D941CD917C2003DB36C /* FavesViewController.swift */; };
@@ -72,6 +73,7 @@
 		69B674ED1CCE90F70071F19A /* BaseService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseService.swift; sourceTree = "<group>"; };
 		69B674EF1CCE92D70071F19A /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		69B674F11CCE92EA0071F19A /* CreateAccountViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateAccountViewController.swift; sourceTree = "<group>"; };
+		AF68538B1CD9962300B31EB8 /* TeamProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TeamProfileViewController.swift; sourceTree = "<group>"; };
 		E64351611CD8104E0041DE20 /* TeamSumViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TeamSumViewController.swift; sourceTree = "<group>"; };
 		E662B72A1CD70AD300AF09EE /* SearchTable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchTable.swift; sourceTree = "<group>"; };
 		E69D7D941CD917C2003DB36C /* FavesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavesViewController.swift; sourceTree = "<group>"; };
@@ -193,7 +195,7 @@
 				EC3D50A31CD158BD00FD20C6 /* HomeScreenViewController.swift */,
 				E64351611CD8104E0041DE20 /* TeamSumViewController.swift */,
 				E69D7D941CD917C2003DB36C /* FavesViewController.swift */,
-				E69D7D961CD94712003DB36C /* StatsViewController.swift */,
+				AF68538B1CD9962300B31EB8 /* TeamProfileViewController.swift */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -349,6 +351,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E69D7D951CD917C2003DB36C /* FavesViewController.swift in Sources */,
+				AF68538C1CD9962300B31EB8 /* TeamProfileViewController.swift in Sources */,
 				69203FC71CD82318009A9B18 /* MyProfileViewController.swift in Sources */,
 				EC3D50A81CD1AA0500FD20C6 /* TeamStatsViewController.swift in Sources */,
 				69B674F21CCE92EA0071F19A /* CreateAccountViewController.swift in Sources */,

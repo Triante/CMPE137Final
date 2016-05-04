@@ -137,6 +137,7 @@ class FavesViewController: UIViewController, UITableViewDataSource, UITableViewD
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         //let secondVC: TeamSumViewController = segue.destinationViewController as! TeamSumViewController
         //secondVC.toRecieve = message
+        
     }
 
 
