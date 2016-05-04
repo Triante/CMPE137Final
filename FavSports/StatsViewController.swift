@@ -1,61 +1,58 @@
 //
-//  BrowseTeamsViewController.swift
+//  StatsViewController.swift
 //  FavSports
 //
-//  Created by Alberto Reyes on 4/27/16.
+//  Created by Jorge Aguiniga on 5/3/16.
 //  Copyright © 2016 CMPE 137. All rights reserved.
 //
 
 import UIKit
 import Firebase
 
-class BrowseTeamsViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+class StatsViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+
+    let cellIdentifier = "CellIdentifierStatMain"
     
-    let cellIdentifier = "CellIdentifier"
     
     var categorizedTeams = [String: [String]]()
     
-    var teams = [String]()
+    var faveTeams = [String]()
     
     @IBOutlet weak var tableView: UITableView!
-    
-    
-    
-    override func viewDidAppear(animated: Bool) {
-        super.viewDidAppear(animated)
-        CLUBS_REF.observeEventType(.Value, withBlock: { snapshot in
-            var newTeams = [String]()
-            for team in snapshot.children {
-                let name = team.value["name"] as! String
-                newTeams.append(name)
-            }
-            self.teams = newTeams
-            self.categorizedTeams = self.categorize(self.teams)
-            self.tableView.reloadData()
-            print(self.teams)
-        })
-        /*print("final array:")
-        for team in teams {
-            print("\(team)")
-        }*/
-        //print(teams)
-        
-    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
     }
     
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        faveTeams = []
+        //CLUBS_REF.queryOrderedByChild("Match Stats/Points")
+        
+        CLUBS_REF.queryOrderedByChild("Match Stats/Points").observeEventType(.Value, withBlock: { snapshot in
+            for item in (snapshot.children).reverse() {
+                let child = item.childSnapshotForPath("Match Stats")
+                let stats = "P: \(child.value["Played"] as! Int)    | W: \(child.value["Won"] as! Int) | D: \(child.value["Drawn"] as! Int) | L: \(child.value["Lost"] as! Int) |     Pts: \(child.value["Points"] as! Int)"
+                self.faveTeams.append(item.key)
+                self.faveTeams.append(stats)
+                self.categorizedTeams = self.categorize(self.faveTeams)
+                self.tableView.reloadData()
+            }
+        })
+        
+    }
+    
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         let keys = categorizedTeams.keys
-         print(self.teams)
+        
         return keys.count
     }
     
     //Number of rows per section: the number of teams that will go in each sport category
     func tableView(tableView:UITableView, numberOfRowsInSection section: Int) -> Int {
-
+        
         let keys = categorizedTeams.keys
         
         //sort keys
@@ -72,11 +69,11 @@ class BrowseTeamsViewController: UIViewController, UITableViewDataSource, UITabl
         }
         return 0
     }
-
+    
     //required methods for table protocol: tableView(_:cellForRowAtIndexPath:)
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-     
+        
         //check if there was a table view already created in the reuse queue
         let cell = tableView.dequeueReusableCellWithIdentifier(cellIdentifier, forIndexPath: indexPath)
         
@@ -100,8 +97,8 @@ class BrowseTeamsViewController: UIViewController, UITableViewDataSource, UITabl
         return cell
     }
     func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-         print(self.teams)
-
+        
+        
         // Fetch and Sort Keys
         let keys = categorizedTeams.keys.sort({ (a, b) -> Bool in
             a.lowercaseString < b.lowercaseString
@@ -112,12 +109,12 @@ class BrowseTeamsViewController: UIViewController, UITableViewDataSource, UITabl
     private func categorize(array: [String]) -> [String: [String]] {
         var result = [String: [String]]()
         for item in array{
-            if result["Soccer"] != nil{
-                result["Soccer"]!.append(item)
+            if result["Stats and Rankings"] != nil{
+                result["Stats and Rankings"]!.append(item)
                 
             }
             else{
-                result["Soccer"] = [item]
+                result["Stats and Rankings"] = [item]
             }
         }
         return result
@@ -127,42 +124,11 @@ class BrowseTeamsViewController: UIViewController, UITableViewDataSource, UITabl
     var faves = [String]()
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        var teamName : String
-        teamName = teams[indexPath.row]
-         print(self.teams)
-        let cell = tableView.cellForRowAtIndexPath(indexPath)!
-        toggleCellCheckbox(cell, teamName: teamName)
-    }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
-    func toggleCellCheckbox(cell: UITableViewCell, teamName: String) {
-        message = teamName
-        self.performSegueWithIdentifier("showTeamSum", sender: self)
-        
-//        if cell.accessoryType ==  UITableViewCellAccessoryType.Checkmark {
-//            cell.accessoryType = UITableViewCellAccessoryType.None
-//            cell.textLabel?.textColor = UIColor.blackColor()
-//            cell.detailTextLabel?.textColor = UIColor.blackColor()
-//            let i = faves.indexOf(teamName)!
-//            faves.removeAtIndex(i)
-//        } else {
-//            cell.accessoryType = UITableViewCellAccessoryType.Checkmark
-//            cell.textLabel?.textColor = UIColor.grayColor()
-//            cell.detailTextLabel?.textColor = UIColor.grayColor()
-//            faves.append(teamName)
-//        }
-    }
-    var message = ""
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        if segue.identifier == "showTeamSum" {
-            let secondVC: TeamSumViewController = segue.destinationViewController as! TeamSumViewController
-            secondVC.toRecieve = message
-        }
-    }
+    
+    
 
     /*
     // MARK: - Navigation

@@ -32,4 +32,5 @@ var CURRENT_USER: Firebase{ // save unique identifier for user that is logged in
 }
 
 var CURRENT_USER_UID: String = ""
+var SELECTED_TEAM: String = ""
 

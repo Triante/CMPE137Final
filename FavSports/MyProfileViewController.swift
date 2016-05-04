@@ -21,6 +21,7 @@ class MyProfileViewController: UIViewController {
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
         print(CURRENT_USER_UID)
+        print(SELECTED_TEAM)
     }
 
     override func didReceiveMemoryWarning() {
